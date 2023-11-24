@@ -8,12 +8,6 @@ from detectron2.modeling.meta_arch.build import META_ARCH_REGISTRY
 from glass.postprocess.post_processor_academic import detector_postprocess
 
 
-class ImageList:
-    def __init__(self, images, image_sizes):
-        self.tensor = images
-        self.image_sizes = image_sizes
-
-
 @META_ARCH_REGISTRY.register()
 class GlassRCNN(GeneralizedRCNN):
     """
